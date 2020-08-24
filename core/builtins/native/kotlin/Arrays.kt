@@ -42,6 +42,37 @@ public class ByteArray(size: Int) {
 
     /** Creates an iterator over the elements of the array. */
     public operator fun iterator(): ByteIterator
+    
+    /** Times operator for ByteArray */
+    operator fun ByteArray.times(other: ByteArray): ByteArray {
+		val result = ByteArray(this.size)
+		for(i in 0 until this.size-1) result[i] = (this[i] * other[i]).toByte()
+		return result
+	}
+    /** Minus operator for ByteArray */
+	operator fun ByteArray.minus(other: ByteArray): ByteArray {
+		val result = ByteArray(this.size)
+		for(i in 0 until this.size-1) result[i] = (this[i] - other[i]).toByte()
+		return result
+	}
+    /** Plus operator for ByteArray */
+	operator fun ByteArray.plus(other: ByteArray): ByteArray {
+		val result = ByteArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] + other[i]).toByte()
+		return result
+	}
+    /** Div operator for ByteArray */
+	operator fun ByteArray.div(other: ByteArray): ByteArray {
+		val result = ByteArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] / other[i]).toByte()
+		return result
+	}
+    /** Rem operator for ByteArray */
+	operator fun ByteArray.rem(other: ByteArray): ByteArray {
+		val result = ByteArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] + other[i]).toByte()
+		return result
+	}
 }
 
 /**
@@ -116,6 +147,37 @@ public class ShortArray(size: Int) {
 
     /** Creates an iterator over the elements of the array. */
     public operator fun iterator(): ShortIterator
+    
+    /** Times operator for ShortArray */
+    operator fun ShortArray.times(other: ShortArray): ShortArray {
+		val result = ShortArray(this.size)
+		for(i in 0 until this.size-1) result[i] = (this[i] * other[i]).toShort()
+		return result
+	}
+    /** Minus operator for ShortArray */
+	operator fun ShortArray.minus(other: ShortArray): ShortArray {
+		val result = ShortArray(this.size)
+		for(i in 0 until this.size-1) result[i] = (this[i] - other[i]).toShort()
+		return result
+	}
+    /** Plus operator for ShortArray */
+	operator fun ShortArray.plus(other: ShortArray): ShortArray {
+		val result = ShortArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] + other[i]).toShort()
+		return result
+	}
+    /** Div operator for ShortArray */
+	operator fun ShortArray.div(other: ShortArray): ShortArray {
+		val result = ShortArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] / other[i]).toShort()
+		return result
+	}
+    /** Rem operator for ShortArray */
+	operator fun ShortArray.rem(other: ShortArray): ShortArray {
+		val result = ShortArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] + other[i]).toShort()
+		return result
+	}
 }
 
 /**
@@ -153,6 +215,37 @@ public class IntArray(size: Int) {
 
     /** Creates an iterator over the elements of the array. */
     public operator fun iterator(): IntIterator
+    
+    /** Times operator for IntArray */
+    operator fun IntArray.times(other: IntArray): IntArray {
+		val result = IntArray(this.size)
+		for(i in 0 until this.size-1) result[i] = (this[i] * other[i])
+		return result
+	}
+    /** Minus operator for IntArray */
+	operator fun IntArray.minus(other: IntArray): IntArray {
+		val result = IntArray(this.size)
+		for(i in 0 until this.size-1) result[i] = (this[i] - other[i])
+		return result
+	}
+    /** Plus operator for IntArray */
+	operator fun IntArray.plus(other: IntArray): IntArray {
+		val result = IntArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] + other[i])
+		return result
+	}
+    /** Div operator for IntArray */
+	operator fun IntArray.div(other: IntArray): IntArray {
+		val result = IntArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] / other[i])
+		return result
+	}
+    /** Rem operator for IntArray */
+	operator fun IntArray.rem(other: IntArray): IntArray {
+		val result = IntArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = (this[i] + other[i])
+		return result
+	}
 }
 
 /**
@@ -190,6 +283,37 @@ public class LongArray(size: Int) {
 
     /** Creates an iterator over the elements of the array. */
     public operator fun iterator(): LongIterator
+    
+    /** Times operator for LongArray */
+    operator fun LongArray.times(other: LongArray): LongArray {
+		val result = LongArray(this.size)
+		for(i in 0 until this.size-1) result[i] = this[i] * other[i]
+		return result
+	}
+    /** Minus operator for LongArray */
+	operator fun LongArray.minus(other: LongArray): LongArray {
+		val result = LongArray(this.size)
+		for(i in 0 until this.size-1) result[i] = this[i] - other[i]
+		return result
+	}
+    /** Plus operator for LongArray */
+	operator fun LongArray.plus(other: LongArray): LongArray {
+		val result = LongArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] + other[i]
+		return result
+	}
+    /** Div operator for LongArray */
+	operator fun LongArray.div(other: LongArray): LongArray {
+		val result = LongArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] / other[i]
+		return result
+	}
+    /** Rem operator for LongArray */
+	operator fun LongArray.rem(other: LongArray): LongArray {
+		val result = LongArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] % other[i]
+		return result
+	}
 }
 
 /**
@@ -227,6 +351,37 @@ public class FloatArray(size: Int) {
 
     /** Creates an iterator over the elements of the array. */
     public operator fun iterator(): FloatIterator
+    
+    /** Times operator for FloatArray */
+    operator fun FloatArray.times(other: FloatArray): FloatArray {
+		val result = FloatArray(this.size)
+		for(i in 0 until this.size-1) result[i] = this[i] * other[i]
+		return result
+	}
+    /** Minus operator for FloatArray */
+	operator fun FloatArray.minus(other: FloatArray): FloatArray {
+		val result = FloatArray(this.size)
+		for(i in 0 until this.size-1) result[i] = this[i] - other[i]
+		return result
+	}
+    /** Plus operator for FloatArray */
+	operator fun FloatArray.plus(other: FloatArray): FloatArray {
+		val result = FloatArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] + other[i]
+		return result
+	}
+    /** Div operator for FloatArray */
+	operator fun FloatArray.div(other: FloatArray): FloatArray {
+		val result = FloatArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] / other[i]
+		return result
+	}
+    /** Rem operator for FloatArray */
+	operator fun FloatArray.rem(other: FloatArray): FloatArray {
+		val result = FloatArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] % other[i]
+		return result
+	}
 }
 
 /**
@@ -264,6 +419,37 @@ public class DoubleArray(size: Int) {
 
     /** Creates an iterator over the elements of the array. */
     public operator fun iterator(): DoubleIterator
+    
+    /** Times operator for DoubleArray */
+    operator fun DoubleArray.times(other: DoubleArray): DoubleArray {
+		val result = DoubleArray(this.size)
+		for(i in 0 until this.size-1) result[i] = this[i] * other[i]
+		return result
+	}
+    /** Minus operator for DoubleArray */
+	operator fun DoubleArray.minus(other: DoubleArray): DoubleArray {
+		val result = DoubleArray(this.size)
+		for(i in 0 until this.size-1) result[i] = this[i] - other[i]
+		return result
+	}
+    /** Plus operator for DoubleArray */
+	operator fun DoubleArray.plus(other: DoubleArray): DoubleArray {
+		val result = DoubleArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] + other[i]
+		return result
+	}
+    /** Div operator for DoubleArray */
+	operator fun DoubleArray.div(other: DoubleArray): DoubleArray {
+		val result = DoubleArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] / other[i]
+		return result
+	}
+    /** Rem operator for DoubleArray */
+	operator fun DoubleArray.rem(other: DoubleArray): DoubleArray {
+		val result = DoubleArray(this.size)
+		for (i in 0 until this.size - 1) result[i] = this[i] % other[i]
+		return result
+	}
 }
 
 /**
